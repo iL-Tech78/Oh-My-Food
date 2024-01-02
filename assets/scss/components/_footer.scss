@@ -1,0 +1,30 @@
+/*=============== FOOTER ===============*/
+.footer{
+    background-color: var(--grey-1);
+    padding: 22px 25px;
+    &__container{
+        row-gap: 16px;
+    }
+    &__logo{
+        color: var(--white-color);
+        font-size: var(--h2-font-size);
+        font-family: var(--first-font);
+    }
+    &__title{
+        display: flex;
+        gap: 10px;
+        font-size: var(--h3-font-size);
+        color: var(--white-color);
+        margin-bottom: 7px;
+        
+    }
+    &__data{
+        display: grid;
+        row-gap: 7px;
+    }
+    &__information{
+        color: var(--white-color);
+        font-size: var(--h3-font-size);
+        font-weight: var(-font-light-medium);
+    }
+}

@@ -1,0 +1,242 @@
+// Animation du coeur Methode 1
+.fa-heart{
+    font-size: 28px;
+}
+.fas.fa-heart{
+    color: transparent;
+    background-image: linear-gradient(355deg, 
+    rgb(147, 86, 220) -20%, rgb(255, 121, 218) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: 0.3s;
+}
+.fas.fa-heart:hover {
+    opacity: 100;
+    transform: scale(1);
+}
+.far.fa-heart{
+    position: relative;
+    left: 32px;
+    color: black;
+}
+// Animation du coeur
+input[type="checkbox"]{
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    position: relative;
+    outline: none;
+    transform: rotate(45deg);
+    -webkit-appearance: none;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+input[type="checkbox"]:before{
+    position: absolute;
+    content: "";
+    background-color: white;
+
+    height: 152%;
+    width: 100%;
+    top: -59%;
+    right: -1px;
+
+    border-radius: 75px 75px 0 0;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+input[type="checkbox"]:after{
+    position: absolute;
+    content: "";
+    background-color: white;
+
+    height: 58%;
+    width: 100%;
+    top: 21%;
+    right: 75%;
+    top: 19%;
+    right: 75%;
+
+    transform: rotate(-90deg);
+    border-radius: 75px 75px 0 0;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+input[type="checkbox"]:checked,
+input:checked[type="checkbox"]:before,
+input:checked[type="checkbox"]:after{
+    background: #9356DC;
+}
+
+// Animation des cardes
+.ul-cards {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+.ul-cards .li-cards {
+    width: 95%;
+    background: #fff;
+    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15.04px;
+    margin-bottom: 12px;
+    display: flex;
+    cursor: pointer;
+    animation: fade-up ease-in-out;
+}
+
+.li-cards:hover .carte-valide {
+    transition: .3s;
+    display: flex;
+}
+.carte-choice {
+    width: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+}
+.carte-choice h4 {
+    width: 100%;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    text-overflow: ellipsis;
+}
+.carte-desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15.043px;
+    font-weight: var(--font-light);
+}
+.carte-desc p {
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 15.043px;
+    font-weight: var(--font-light);
+    text-overflow: ellipsis;
+}
+.choice-price {
+    width: 10%;
+    color: #353535;
+    font-size: 15.043px;
+    font-weight: var(--font-bold);
+}
+.carte-valide {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #99E2D0;
+    border-radius: 0 15.04px 15.04px 0;
+    display: none;
+    transition-duration: 0.5s;
+    animation: slideLeft 0.5s;
+}
+.carte-valide .fas-circle {
+    font-size: 1.5em;
+    color: #FFF;
+}
+@keyframes slideLeft {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.delay-1{
+    animation-duration: .5s !important;
+}
+.delay-2{
+    animation-duration: 1s !important;
+}
+.delay-3{
+    animation-duration: 1.5s !important;
+}
+.delay-4{
+    animation-duration: 2s !important;
+}
+.delay-5{
+    animation-duration: 2.5s !important;
+}
+.delay-6{
+    animation-duration: 3s !important;
+}
+.delay-7{
+    animation-duration: 3.5s !important;
+}
+.delay-8{
+    animation-duration: 4s !important;
+}
+.delay-9{
+    animation-duration: 4.5s !important;
+}
+.delay-10{
+    animation-duration: 5s !important;
+}
+.loader {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.83);
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    animation: disparition 0.1s 1.8s forwards;
+}
+.point {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0 20px;
+    animation: loader infinite 0.3s alternate;
+}
+.p1 {
+    background-color: #9356DC;
+}
+
+.p2 {
+    background-color: #FF79DA;
+    animation-delay: 0.05s;
+}
+
+.p3 {
+    background-color: #99E2D0;
+    animation-delay: 0.1s;
+}
+
+@keyframes disparition {
+    100% {
+        opacity: 0%;
+        pointer-events: none;
+    }
+}
+
+@keyframes loader {
+    100% {
+        transform: translateY(-30px);
+    }
+}

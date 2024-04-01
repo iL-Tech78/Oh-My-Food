@@ -24,6 +24,7 @@
             border-radius: 20px;
             background: var(--grey-2);
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
             &:before{
                 position: absolute;
                 height: 24px;
@@ -44,9 +45,6 @@
             }
             i{
                 color: rgb(126, 126, 126);
-                &.fa-store{
-                    color: var(--first-color);
-                }
             }
         }
     }

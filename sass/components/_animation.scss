@@ -107,7 +107,9 @@ input:checked[type="checkbox"]:after{
     width: 100%;
     font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
+    white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 .carte-desc {
     width: 100%;

@@ -561,7 +561,7 @@ input[type="checkbox"] {
   outline: none;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   cursor: pointer;
@@ -661,6 +661,9 @@ input:checked[type="checkbox"]:after {
   font-size: var(--h2-font-size);
   font-weight: var(--font-medium);
   text-overflow: ellipsis;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .carte-desc {

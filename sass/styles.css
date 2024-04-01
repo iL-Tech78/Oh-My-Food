@@ -271,9 +271,11 @@ img {
   color: #7e7e7e;
 }
 
-.fonctionnement__filter-content i.fa-store {
+.fonctionnement__filter-content i:hover {
   color: var(--first-color);
+  cursor: pointer;
 }
+
 
 .fonctionnement__filter-content:nth-child(1)::before {
   content: "1";

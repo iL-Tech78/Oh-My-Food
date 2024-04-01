@@ -52,6 +52,13 @@
     }
 }
 
+.fonctionnement__filter-content:hover {
+    i{
+      color: var(--first-color);
+      cursor: pointer;
+    }
+}
+
 .fonctionnement__filter-content:nth-child(1)::before {
     content: "1";
 }

@@ -458,7 +458,7 @@ input[type=checkbox] {
   position: relative;
   outline: none;
   transform: rotate(45deg);
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   cursor: pointer;
